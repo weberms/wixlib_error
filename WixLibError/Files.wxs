@@ -1,10 +1,7 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
   <Fragment>
-        <DirectoryRef Id="INSTALLFOLDER">
-            <Component Id="WixLib_Config_Files" Guid="{D4524CC8-69A6-4832-B52B-371345E9A496}" Shared="yes" Bitness="always64">
-                <File Id="Config1.xml"  Source="..\ConfigLibrary\ConfigFile1.xml" Vital="yes" />
-                <File Id="Config2.xml" Source="..\ConfigLibrary\ConfigFile2.xml" Vital="yes" />
-            </Component>
-        </DirectoryRef>
+      <ComponentGroup Id="WixlibError">
+          <ComponentRef Id="WixLib_Config_Files" />
+      </ComponentGroup>
   </Fragment>
 </Wix>
